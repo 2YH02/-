@@ -1,14 +1,14 @@
 function solution(s) {
   let answer = "YES";
   s = s.toLowerCase();
-  let len = s.length;
+  let n = s.length;
 
-  for (let i = 0; i < Math.floor(len / 2); i++) {
-    if (s[i] != s[len - i - 1]) return "NO";
+  for (let i = 0; i < Math.sqrt(n); i++) {
+    if (s[i] !== s[n - i - 1]) answer = "NO";
   }
 
   return answer;
 }
 
-let str = "goooG";
+let str = "gododoG";
 console.log(solution(str));
