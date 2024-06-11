@@ -13,5 +13,6 @@ function solution(s) {
   return answer;
 }
 
-let a = "()(((()())(())()))(())";
+// let a = "()(((()())(())()))(())";
+let a = "(((()(()()))(())()))(()())";
 console.log(solution(a));
