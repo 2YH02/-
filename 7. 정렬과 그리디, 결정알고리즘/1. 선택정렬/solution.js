@@ -1,28 +1,19 @@
-function count(stable, dist) {
-  let cnt = 1;
-  let ep = stable[0];
-  for (let i = 1; i < stable.length; i++) {
-    if (stable[i] - ep >= dist) {
-      cnt++;
-      ep = stable[i];
+// 배열 돌기
+// 선택하기
+// 선택한거 +1 부터 다시 돌면서 크기 비교하기
+// 바꾸기
+
+function solution(arr) {
+  let answer = arr;
+  for (let i = 0; i < arr.length; i++) {
+    let idx = i; // 여기 선택한 index에 들어올 숫자 찾으면서 정렬
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[idx]) idx = j;
     }
-  }
-  return cnt;
-}
-function solution(c, stable) {
-  let answer;
-  stable.sort((a, b) => a - b);
-  let lt = 1;
-  let rt = stable[stable.length - 1];
-  while (lt <= rt) {
-    let mid = parseInt((lt + rt) / 2);
-    if (count(stable, mid) >= c) {
-      answer = mid;
-      lt = mid + 1;
-    } else rt = mid - 1;
+    [arr[i], arr[idx]] = [arr[idx], arr[i]];
   }
   return answer;
 }
 
-let arr = [1, 2, 8, 4, 9];
-console.log(solution(3, arr));
+let arr = [13, 5, 11, 7, 23, 15];
+console.log(solution(arr));
