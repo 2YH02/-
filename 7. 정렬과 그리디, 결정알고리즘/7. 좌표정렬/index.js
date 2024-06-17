@@ -1,5 +1,6 @@
 function solution(arr) {
-  let answer;
+  let answer = arr;
+  answer.sort((a, b) => (a[0] === b[0] ? a[1] - b[1] : a[0] - b[0]));
   return answer;
 }
 
