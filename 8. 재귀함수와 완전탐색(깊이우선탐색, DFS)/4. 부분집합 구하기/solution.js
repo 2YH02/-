@@ -10,6 +10,7 @@ function solution(n) {
       }
       if (tmp.length > 0) answer.push(tmp.trim());
     } else {
+      // 결국 포함 한다 안한다 두갈래
       ch[L] = 1; // 포함 체크
       DFS(L + 1); // 포함 갈래
       ch[L] = 0; // 불포함 채크
