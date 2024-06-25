@@ -1,5 +1,18 @@
 function solution(c, arr) {
-  let answer;
+  let answer = 0;
+  let n = arr.length;
+
+  const DFS = (L, sum) => {
+    if (sum > c) return;
+    if (L === n) {
+      answer = Math.max(answer, sum);
+    } else {
+      DFS(L + 1, sum + arr[L]);
+      DFS(L + 1, sum);
+    }
+  };
+
+  DFS(0, 0);
   return answer;
 }
 

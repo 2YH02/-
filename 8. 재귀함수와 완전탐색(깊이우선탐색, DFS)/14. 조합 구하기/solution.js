@@ -1,3 +1,5 @@
+// 조합에서 1 2 와 2 1은 같은거임
+
 function solution(n, m) {
   let answer = [];
   let tmp = Array.from({ length: m }, () => 0);

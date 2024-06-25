@@ -1,6 +1,6 @@
 function solution1(m, arr) {
   let answer = [];
-  n = arr.length;
+  let n = arr.length;
   let ch = Array.from({ length: n }, () => 0);
   let tmp = Array.from({ length: m }, () => 0);
   function DFS(L) {
@@ -23,7 +23,7 @@ function solution1(m, arr) {
 
 function solution2(m, arr) {
   let answer = [];
-  n = arr.length;
+  let n = arr.length;
   let ch = Array.from({ length: n }, () => 0);
   let tmp = [];
   function DFS(L) {
