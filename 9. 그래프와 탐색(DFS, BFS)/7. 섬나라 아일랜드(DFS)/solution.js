@@ -16,7 +16,6 @@ function solution(board) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       if (board[i][j] === 1) {
-        board[i][j] = 0;
         answer++;
         DFS(i, j);
       }
