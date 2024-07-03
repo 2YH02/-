@@ -1,9 +1,9 @@
 function solution(a, b, c) {
-  let answer;
+  let answer = Number.MAX_SAFE_INTEGER;
   if (a < b) answer = a;
   else answer = b;
-  if (c < answer) answer = c;
 
+  if (answer > c) answer = c;
   return answer;
 }
 

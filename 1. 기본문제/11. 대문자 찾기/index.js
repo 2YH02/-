@@ -4,7 +4,6 @@ function solution(s) {
   for (let x of s) {
     if (x === x.toUpperCase()) answer++;
   }
-
   return answer;
 }
 

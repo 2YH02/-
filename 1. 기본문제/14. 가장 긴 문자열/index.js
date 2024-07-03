@@ -1,6 +1,6 @@
 function solution(s) {
-  let answer;
-  let max = Number.MIN_SAFE_INTEGER;
+  let answer = "";
+  let max = 0;
 
   for (let x of s) {
     if (x.length > max) {

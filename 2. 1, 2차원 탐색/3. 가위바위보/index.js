@@ -1,15 +1,5 @@
 function solution(a, b) {
-  let answer = "";
-  let n = a.length;
-
-  for (let i = 0; i < n; i++) {
-    if (a[i] === b[i]) answer += "D";
-    else if (a[i] === 1 && b[i] === 3) answer += "A";
-    else if (a[i] === 2 && b[i] === 1) answer += "A";
-    else if (a[i] === 3 && b[i] === 2) answer += "A";
-    else answer += "B";
-  }
-
+  let answer;
   return answer;
 }
 

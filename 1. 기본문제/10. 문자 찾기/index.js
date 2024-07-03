@@ -1,8 +1,7 @@
 function solution(s, t) {
   let answer;
 
-  answer = s.split("R").length - 1;
-  
+  answer = s.split(t).length - 1;
   return answer;
 }
 

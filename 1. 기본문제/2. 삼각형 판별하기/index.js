@@ -1,13 +1,13 @@
 function solution(a, b, c) {
-  let answer = "YES";
+  let answer = "No";
+  let max = Number.MIN_SAFE_INTEGER;
   let total = a + b + c;
-  let max;
 
   if (a > b) max = a;
   else max = b;
   if (c > max) max = c;
 
-  if (total - max <= max) answer = "no";
+  if (total - max > max) answer = "YES";
 
   return answer;
 }

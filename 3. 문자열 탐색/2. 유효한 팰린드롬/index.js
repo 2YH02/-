@@ -1,11 +1,5 @@
 function solution(s) {
-  let answer = "NO";
-  let str = s.toLowerCase().replace(/[^a-z]/g, "");
-  let r_str = str.split("").reverse().join("");
-
-  if (str === r_str) answer = "YES";
-  console.log(r_str);
-
+  let answer;
   return answer;
 }
 

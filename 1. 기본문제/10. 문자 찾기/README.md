@@ -14,7 +14,10 @@
 
 ### 입력예제 1
 
+```
 COMPUTERPROGRAMMING
+```
+
 R
 
 ### 출력예제 1

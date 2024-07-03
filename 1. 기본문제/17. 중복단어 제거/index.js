@@ -1,9 +1,8 @@
 function solution(s) {
   let answer;
 
-  answer = s.filter((v, i) => {
-    return i === s.indexOf(v);
-  });
+  answer = Array.from(new Set(s));
+
   return answer;
 }
 let str = ["good", "time", "good", "time", "student"];

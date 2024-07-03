@@ -5,12 +5,9 @@ function solution(arr) {
 
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = i + 1; j < arr.length; j++) {
-      let sum = arr[i] + arr[j];
-
-      if (total - sum === 100) {
-        answer.splice(j, 1);
-        answer.splice(i, 1);
-
+      if (total - (arr[i] + arr[j]) === 100) {
+        arr.splice(j, 1);
+        arr.splice(i, 1);
         flag = 1;
         break;
       }
@@ -18,7 +15,6 @@ function solution(arr) {
 
     if (flag) break;
   }
-
   return answer;
 }
 
