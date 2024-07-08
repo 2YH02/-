@@ -1,5 +1,27 @@
 function solution(arr) {
-  let answer;
+  let answer = Number.MIN_SAFE_INTEGER;
+  let n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    let sum1 = 0;
+    let sum2 = 0;
+    for (let j = 0; j < n; j++) {
+      sum1 += arr[i][j];
+      sum2 += arr[j][i];
+    }
+
+    answer = Math.max(answer, sum1, sum2);
+  }
+
+  for (let i = 0; i < n; i++) {
+    let sum1 = 0;
+    let sum2 = 0;
+    for (let j = 0; j < n; j++) {
+      sum1 += arr[j][j];
+      sum2 += arr[n - j - 1][j];
+    }
+    answer = Math.max(answer, sum1, sum2);
+  }
   return answer;
 }
 
