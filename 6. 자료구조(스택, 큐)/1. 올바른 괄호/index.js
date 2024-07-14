@@ -5,12 +5,13 @@ function solution(s) {
   for (let x of s) {
     if (x === "(") stack.push(x);
     else {
-      if (stack.length === 0) answer = "NO";
+      if (stack.length === 0) return "NO";
       stack.pop();
     }
   }
 
-  if (stack.length > 0) answer = "NO";
+  if (stack.length > 0) return "NO";
+
   return answer;
 }
 
