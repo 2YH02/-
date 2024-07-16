@@ -1,19 +1,5 @@
 function solution(board, moves) {
   let answer = 0;
-  let n = board.length;
-  let stack = [];
-  for (let x of moves) {
-    for (let i = 0; i < n; i++) {
-      if (board[i][x - 1] !== 0) {
-        let tmp = board[i][x - 1];
-        board[i][x - 1] = 0;
-        if (stack[stack.length - 1] === tmp) {
-          stack.pop();
-          answer += 2;
-        } else stack.push(tmp);
-      }
-    }
-  }
   return answer;
 }
 

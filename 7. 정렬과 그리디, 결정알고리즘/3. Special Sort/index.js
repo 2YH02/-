@@ -1,18 +1,5 @@
 function solution(arr) {
   let answer = [];
-
-  let negatives = [];
-  let positives = [];
-
-  for (let x of arr) {
-    if (x < 0) {
-      negatives.push(x);
-    } else {
-      positives.push(x);
-    }
-  }
-
-  answer = negatives.concat(positives);
   return answer;
 }
 
