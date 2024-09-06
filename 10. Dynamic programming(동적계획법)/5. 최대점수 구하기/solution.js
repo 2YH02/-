@@ -1,6 +1,6 @@
 function solution(m, arr) {
   let answer = 0;
-  let dy = Array.from({ length: m + 1 }, () => 0);
+  let dy = Array.from({ length: m + 1 }, () => 0); // i시간의 최대 점수
   for (let i = 0; i < arr.length; i++) {
     let ps = arr[i][0];
     let pt = arr[i][1];
