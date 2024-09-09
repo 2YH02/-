@@ -1,33 +1,5 @@
 function solution(n, arr) {
-  let answer = 0;
-  let graph = Array.from(Array(n + 1), () => Array());
-  let ch = Array.from({ length: n + 1 }, () => 0);
-
-  let path = [];
-  for (let [a, b] of arr) {
-    graph[a].push(b);
-  }
-
-  const DFS = (v) => {
-    if (v === n) {
-      answer++;
-      console.log(path);
-    } else {
-      for (let nv of graph[v]) {
-        if (ch[nv] === 0) {
-          ch[nv] = 1;
-          path.push(nv);
-          DFS(nv);
-          ch[nv] = 0;
-          path.pop();
-        }
-      }
-    }
-  };
-
-  ch[1] = 1;
-  path.push(1);
-  DFS(1);
+  let answer;
   return answer;
 }
 

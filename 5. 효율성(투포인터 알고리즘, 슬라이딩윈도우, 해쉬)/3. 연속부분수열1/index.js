@@ -1,19 +1,5 @@
 function solution(m, arr) {
-  let answer = 0;
-  let n = arr.length;
-
-  let lt = 0;
-  let sum = 0;
-
-  for (let rt = 0; rt < n; rt++) {
-    sum += arr[rt];
-    if (sum === m) answer++;
-
-    while (sum >= m) {
-      sum -= arr[lt++];
-      if (sum === m) answer++;
-    }
-  }
+  let answer;
   return answer;
 }
 

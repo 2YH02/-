@@ -1,26 +1,5 @@
 function solution(n, arr) {
-  let answer = 0;
-  let max = Number.MIN_SAFE_INTEGER;
-
-  for (let x of arr) {
-    let tmp = x;
-    let sum = 0;
-
-    while (tmp) {
-      let r = tmp % 10;
-      sum += r;
-
-      tmp = parseInt(tmp / 10);
-    }
-
-    if (sum > max) {
-      answer = x;
-      max = sum;
-    } else if (sum === max) {
-      if (x > answer) answer = x;
-    }
-  }
-
+  let answer;
   return answer;
 }
 

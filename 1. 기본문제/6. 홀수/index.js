@@ -5,8 +5,8 @@ function solution(arr) {
 
   for (let x of arr) {
     if (x % 2 === 1) {
-      sum += x;
       if (x < min) min = x;
+      sum += x;
     }
   }
 

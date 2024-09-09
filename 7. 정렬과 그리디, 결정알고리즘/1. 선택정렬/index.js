@@ -1,13 +1,5 @@
 function solution(arr) {
-  let answer = arr;
-  for (let i = 0; i < arr.length; i++) {
-    let idx = i;
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[i]) idx = j;
-    }
-
-    [arr[i], arr[idx]] = [arr[idx], arr[i]];
-  }
+  let answer;
   return answer;
 }
 

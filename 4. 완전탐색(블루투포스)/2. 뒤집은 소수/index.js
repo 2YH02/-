@@ -1,27 +1,7 @@
-function isPrime(num) {
-  if (num === 1) return false;
-
-  for (let i = 2; i < parseInt(Math.sqrt(num)); i++) {
-    if (num % i === 0) return false;
-  }
-
-  return true;
-}
+function isPrime(num) {}
 
 function solution1(arr) {
-  let answer = [];
-
-  for (let x of arr) {
-    let res = 0;
-
-    while (x) {
-      res = res * 10 + (x % 10);
-      x = parseInt(x / 10);
-    }
-
-    if (isPrime(res)) answer.push(res);
-  }
-
+  let answer;
   return answer;
 }
 

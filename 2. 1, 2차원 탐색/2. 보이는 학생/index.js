@@ -1,14 +1,5 @@
 function solution(arr) {
-  let answer = 1;
-
-  let max = arr[0];
-
-  for (let x of arr) {
-    if (x > max) {
-      answer++;
-      max = x;
-    }
-  }
+  let answer;
 
   return answer;
 }

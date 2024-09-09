@@ -1,8 +1,5 @@
 function solution(s) {
-  let answer = "";
-
-  answer = Array.from(new Set(s)).join("");
-
+  let answer;
   return answer;
 }
 console.log(solution("ksekkset"));

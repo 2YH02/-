@@ -1,13 +1,5 @@
 function solution(s) {
-  let answer = "";
-  let max = 0;
-
-  for (let x of s) {
-    if (x.length > max) {
-      max = x.length;
-      answer = x;
-    }
-  }
+  let answer;
   return answer;
 }
 let str = ["teacher", "time", "student", "beautiful", "good"];
