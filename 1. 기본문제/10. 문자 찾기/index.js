@@ -1,6 +1,8 @@
 function solution(s, t) {
-  let answer;
-
+  let answer = 0;
+  for (let x of s) {
+    if (x === t) answer++;
+  }
   return answer;
 }
 
