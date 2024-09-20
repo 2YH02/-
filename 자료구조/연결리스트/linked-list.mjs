@@ -63,7 +63,7 @@ export class LinkedList {
     if (index === 0) {
       let deleteNode = this.head;
       this.head = this.head.next;
-      this.count;
+      this.count--;
       return deleteNode;
     } else {
       for (let i = 0; i < index - 1; i++) {

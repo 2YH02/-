@@ -1,4 +1,4 @@
-import { LinkedList, Node } from "./linked-list.mjs";
+import { LinkedList } from "./linked-list.mjs";
 
 /**
  * 1. 모든 데이터 출력 printAll()
