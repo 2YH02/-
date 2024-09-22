@@ -15,11 +15,15 @@ export class DoublyLinkedList {
 
   printAll() {
     let curNode = this.head;
+    let data = "[";
 
     while (curNode) {
-      console.log(curNode.data);
+      data += curNode.data + " ";
       curNode = curNode.next;
     }
+
+    data += "]";
+    console.log(data);
   }
 
   clear() {

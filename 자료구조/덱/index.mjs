@@ -11,7 +11,7 @@ import { Deque } from "./deque.mjs";
 
 const deque = new Deque();
 
-console.log("---------addFirst---------");
+console.log("--head에 데이터 삽입--");
 console.log(`isEmpty: ${deque.isEmpty()}`);
 deque.addFirst(1);
 deque.addFirst(2);
@@ -21,38 +21,38 @@ deque.addFirst(5);
 deque.printAll();
 console.log(`isEmpty: ${deque.isEmpty()}`);
 
-console.log("---------remove1---------");
+console.log("--head 데이터 1개 제거--");
 deque.removeFirst();
 deque.printAll();
-console.log("---------remove2---------");
+console.log("--head 데이터 1개 제거--");
 deque.removeFirst();
 deque.printAll();
-console.log("---------remove3---------");
+console.log("--head 데이터 1개 제거--");
 deque.removeFirst();
 deque.printAll();
-console.log("---------remove4---------");
+console.log("--head 데이터 1개 제거--");
 deque.removeFirst();
 deque.printAll();
-console.log("---------remove5---------");
+console.log("--head 데이터 1개 제거--");
 deque.removeFirst();
 deque.printAll();
 
 console.log(`isEmpty: ${deque.isEmpty()}`);
 
-console.log("---------addLast---------");
+console.log("--tail에 데이터 삽입--");
 deque.addLast(1);
 deque.addLast(2);
 deque.addLast(3);
 deque.printAll();
 console.log(`isEmpty: ${deque.isEmpty()}`);
 
-console.log("---------removeLast1---------");
+console.log("--tail 데이터 1개 제거--");
 deque.removeLast();
 deque.printAll();
-console.log("---------removeLast2---------");
+console.log("--tail 데이터 1개 제거--");
 deque.removeLast();
 deque.printAll();
-console.log("---------removeLast3---------");
+console.log("--tail 데이터 1개 제거--");
 deque.removeLast();
 deque.printAll();
 console.log(`isEmpty: ${deque.isEmpty()}`);

@@ -9,7 +9,7 @@ import { Queue } from "./queue.mjs";
 
 let queue = new Queue();
 
-console.log("---------enqueue---------");
+console.log("--데이터 삽입, 첫 번째 참조--");
 queue.enqueue(1);
 queue.enqueue(2);
 queue.enqueue(3);
@@ -17,13 +17,13 @@ queue.enqueue(4);
 
 console.log(queue.front().data);
 
-console.log("---------dequeue---------");
+console.log("--데이터 2개 제거 및 첫 번째 참조--");
 console.log(`${queue.dequeue().data} 제거`);
 console.log(`${queue.dequeue().data} 제거`);
 
 console.log(queue.front().data);
 
-console.log("---------isEmpty---------");
+console.log("--데이터 제거 및 비었는지 확인--");
 console.log(`${queue.dequeue().data} 제거`);
 console.log(`${queue.dequeue().data} 제거`);
 

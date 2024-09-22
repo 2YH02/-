@@ -23,7 +23,7 @@ import { LinkedList } from "./linked-list.mjs";
 
 let list = new LinkedList();
 
-console.log("---------insertAt---------");
+console.log("--데이터 삽입--");
 list.insertAt(0, 0);
 list.insertAt(1, 1);
 list.insertAt(2, 2);
@@ -32,29 +32,29 @@ list.insertAt(4, 4);
 
 list.printAll();
 
-console.log("---------clear---------");
+console.log("--비우기--");
 list.clear();
 list.printAll();
 
-console.log("---------insertLast---------");
+console.log("--마지막 부터 삽입--");
 list.insertLast(1);
 list.insertLast(10);
 list.insertLast(100);
 
 list.printAll();
 
-console.log("---------deleteAt---------");
+console.log("--index 1 삭제--");
 list.deleteAt(1);
 list.printAll();
 
-console.log("---------deleteLast---------");
+console.log("--마지막 삭제--");
 list.insertLast(90);
 list.insertLast(1000);
 list.deleteLast();
 
 list.printAll();
 
-console.log("---------getNodeAt---------");
+console.log("--개별 index 확인--");
 
 let node1 = list.getNodeAt(1);
 let node0 = list.getNodeAt(0);
