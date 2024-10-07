@@ -1,5 +1,28 @@
 function solution(arr) {
-  let answer;
+  let answer = 0;
+
+  let sum1 = 0;
+  let sum2 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      sum1 += arr[i][j];
+      sum2 += arr[j][i];
+    }
+
+    answer = Math.max(sum1, sum2, answer);
+
+    sum1 = 0;
+    sum2 = 0;
+  }
+
+  sum1 = 0;
+  sum2 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum1 += arr[i][i];
+    sum2 += arr[i][arr.length - 1];
+  }
+
+  answer = Math.max(sum1, sum2, answer);
   return answer;
 }
 
