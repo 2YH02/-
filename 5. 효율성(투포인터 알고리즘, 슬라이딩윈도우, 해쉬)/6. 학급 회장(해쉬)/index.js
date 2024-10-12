@@ -1,14 +1,13 @@
 function solution(s) {
-  let answer;
-
+  let answer = "";
+  let max = 0;
   let sH = new Map();
 
   for (let x of s) {
-    if (!sH.has(x)) sH.set(x, 1);
-    else sH.set(x, sH.get(x) + 1);
+    if (sH.has(x)) sH.set(x, sH.get(x) + 1);
+    else sH.set(x, 1);
   }
 
-  let max = Number.MIN_SAFE_INTEGER;
   for (let [k, v] of sH) {
     if (v > max) {
       max = v;
