@@ -1,5 +1,15 @@
 function solution(need, plan) {
-  let answer;
+  let answer = "YES";
+  need = need.split("");
+
+  for (let x of plan) {
+    if (need.includes(x)) {
+      if (need.shift() !== x) return "NO";
+    }
+  }
+
+  if (need.length > 0) return "NO";
+
   return answer;
 }
 
