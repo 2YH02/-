@@ -1,5 +1,16 @@
 function solution(meeting) {
-  let answer;
+  let answer = 1;
+  meeting.sort((a, b) => (a[1] === b[1] ? a[0] - b[0] : a[1] - b[1]));
+
+  let ls = meeting[0][1];
+
+  for (let x of meeting) {
+    if (x[0] === ls) {
+      ls = x[1];
+      answer++;
+    }
+  }
+
   return answer;
 }
 
