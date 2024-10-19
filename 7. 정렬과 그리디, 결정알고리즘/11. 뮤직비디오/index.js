@@ -1,7 +1,34 @@
-function count(songs, capacity) {}
+function count(songs, capacity) {
+  let cnt = 1;
+  let sum = 0;
+
+  for (let x of songs) {
+    if (sum + x > capacity) {
+      cnt++;
+      sum = x;
+    } else sum += x;
+  }
+
+  return cnt
+}
 
 function solution(m, songs) {
-  let answer;
+  let answer = 0;
+
+  let lt = Math.max(...songs);
+  let rt = songs.reduce((a, b) => a + b);
+
+  while (lt <= rt) {
+    let mid = Math.floor((lt + rt) / 2);
+
+    if (count(songs, mid) <= m) {
+      answer = mid;
+      rt = mid - 1;
+    } else {
+      lt = mid + 1;
+    }
+  }
+
   return answer;
 }
 
