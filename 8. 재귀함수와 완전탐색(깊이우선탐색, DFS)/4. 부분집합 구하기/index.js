@@ -1,5 +1,25 @@
 function solution(n) {
-  let answer;
+  let answer = [];
+
+  let ch = Array.from({ length: n + 1 }, () => 0);
+
+  const DFS = (L) => {
+    let tmp = "";
+    if (L === n + 1) {
+      for (let i = 1; i <= n; i++) {
+        if (ch[i] === 1) tmp += i + " ";
+      }
+
+      if (tmp.length > 0) answer.push(tmp.trim());
+    } else {
+      ch[L] = 1;
+      DFS(L + 1);
+      ch[L] = 0;
+      DFS(L + 1);
+    }
+  };
+
+  DFS(1);
   return answer;
 }
 
