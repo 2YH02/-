@@ -1,16 +1,5 @@
 function solution(arr) {
   let answer;
-  let score = Array(arr.length).fill(1);
-
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] < arr[j]) {
-        score[i]++;
-      }
-    }
-  }
-
-  answer = score;
   return answer;
 }
 

@@ -1,9 +1,5 @@
 function solution(arr) {
   let answer = Number.MAX_SAFE_INTEGER;
-
-  for (let x of arr) {
-    if (x < answer) answer = x;
-  }
   return answer;
 }
 
