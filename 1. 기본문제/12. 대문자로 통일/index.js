@@ -1,5 +1,6 @@
 function solution(s) {
   let answer;
+  answer = s.toUpperCase();
   return answer;
 }
 
